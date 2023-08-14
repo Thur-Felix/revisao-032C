@@ -7,7 +7,12 @@ import './App.css'
 
 
 function App() {
-  
+  const [usuario,setUsuario] = useState("")
+  function handleUsuario (evento){
+   setUsuario(evento.target.value)
+    console.log (usuario)
+  }
+
   return (
     <>
    <header>
@@ -20,7 +25,9 @@ function App() {
 
         <div>
           <label htmlFor="usuario"> Usuario</label>
-          <input type="text" id="usuario" placeholder='Digite seu usuario' />
+          <input
+           type="text" id="usuario" placeholder='Digite seu usuario'
+           onChange={handleUsuario} />
         </div>
 
         <div>
